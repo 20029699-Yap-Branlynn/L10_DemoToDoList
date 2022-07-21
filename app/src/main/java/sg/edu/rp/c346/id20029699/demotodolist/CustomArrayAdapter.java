@@ -1,6 +1,7 @@
 package sg.edu.rp.c346.id20029699.demotodolist;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,9 +47,14 @@ public class CustomArrayAdapter extends ArrayAdapter<ToDoItem> {
         tvName.setText(currentVersion.getTitle());
         tvDate.setText(currentVersion.toString());
 
+        Calendar currentDate = Calendar.getInstance();
+        currentDate.set(2022, 7,21);
+
+        if(currentVersion.getDate().before(currentDate))
+            tvDate.setTextColor(Color.RED);
+
+
         return rowView;
-
     }
-
 
 }

@@ -26,14 +26,19 @@ public class MainActivity extends AppCompatActivity {
         date1.set(2020,8,1);
         Calendar date2 = Calendar.getInstance();
         date2.set(2020,8,2);
+        Calendar date3 = Calendar.getInstance();
+        date3.set(2022,8,2);
         ToDoItem item1 = new ToDoItem("Go for movie", date1);
         ToDoItem item2 = new ToDoItem("Go for haircut", date2);
+        ToDoItem item3 = new ToDoItem("Complete Enhancement", date3);
         alToDoList.add(item1);
         alToDoList.add(item2);
+        alToDoList.add(item3);
 
         caToDo = new CustomArrayAdapter(this, R.layout.row, alToDoList);
 
         lvToDo.setAdapter(caToDo);
+
 
     }
 }
